@@ -1,0 +1,44 @@
+Policy
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"s3:PutObject",
+				"s3:GetObject",
+				"s3:GetObjectVersion",
+				"s3:DeleteObject",
+				"s3:DeleteObjectVersion"
+			],
+			"Resource": "arn:aws:s3:::retailrawomkar/*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": "s3:ListBucket",
+			"Resource": "arn:aws:s3:::retailrawomkar"
+		}
+	]
+}
+
+
+Role
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::863691963050:user/15nb0000-s"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+
+Event Notification
+
+After runnig show pipes we get the notification channel arn using which we have to create a event notification i.e it sends a notification that a file has been uploaded into the S3 bucket
