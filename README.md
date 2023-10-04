@@ -1,3 +1,4 @@
+# Disclaimer : Here we are using free version of snowflake i.e a 30 day trial. So here we are supposed to create everything from table,pipelines etc after every 30 days
 # Automation-Using-Python-Snowflake-PowerBI
 The goal of this project is to reduce the load by automating entire process of KPI creation with help of AWS S3 Snowflake , Python , PowerBI. So the tech stcks used were 
 ### AWS S3: 
